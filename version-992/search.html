@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>搜索筛选-精选电影大全-热门好看的影片合集-高清视频在线播放</title>
+  <meta name="description" content="搜索精选电影大全全部影片，支持按片名、地区、类型、年份、标签与简介关键词筛选。">
+  <meta name="keywords" content="精选电影大全,热门影片合集,高清视频在线播放,精选电影,电影大全,高分电影,电影搜索,影片筛选">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body class="">
+<header class="site-header" data-site-header>
+  <div class="site-header__inner container">
+    <a class="site-logo" href="index.html" aria-label="精选电影大全首页">
+      <span class="site-logo__mark">▶</span>
+      <span class="site-logo__text">精选电影大全</span>
+    </a>
+    <nav class="desktop-nav" aria-label="主导航">
+          <a class="nav-link " href="index.html">首页</a>
+          <a class="nav-link " href="categories.html">分类</a>
+          <a class="nav-link " href="rankings.html">排行榜</a>
+          <a class="nav-link is-active" href="search.html">搜索</a>
+    </nav>
+    <form class="header-search" action="search.html" method="get" data-search-form>
+      <label class="visually-hidden" for="header-search-search">搜索影片</label>
+      <input id="header-search-search" name="q" type="search" placeholder="搜索影片、地区、类型" autocomplete="off">
+      <button type="submit">搜索</button>
+    </form>
+    <button class="mobile-nav-toggle" type="button" data-mobile-nav-toggle aria-label="打开菜单">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" data-mobile-nav>
+        <a class="mobile-nav-link " href="index.html">首页</a>
+        <a class="mobile-nav-link " href="categories.html">分类</a>
+        <a class="mobile-nav-link " href="rankings.html">排行榜</a>
+        <a class="mobile-nav-link is-active" href="search.html">搜索</a>
+    <form class="mobile-search" action="search.html" method="get" data-search-form>
+      <input name="q" type="search" placeholder="输入关键词搜索">
+      <button type="submit">搜索</button>
+    </form>
+  </div>
+</header>
+<main>
+<section class="subpage-hero subpage-hero--blue">
+  <div class="container">
+    <a class="back-link" href="index.html">← 返回首页</a>
+    <h1>搜索 / 筛选</h1>
+    <p>输入影片名、地区、类型、年份、标签或剧情关键词，快速查找全部静态影片详情页。</p>
+  </div>
+</section>
+
+<section class="container page-section search-page-panel">
+  <form class="search-page-form" data-global-search-form>
+    <input name="q" type="search" placeholder="搜索 2000 部影片，例如：悬疑、香港、2024、爱情" autofocus>
+    <button type="submit">搜索</button>
+  </form>
+  <div class="search-helper">
+    <span>可搜索字段：标题</span>
+    <span>简介</span>
+    <span>地区</span>
+    <span>类型</span>
+    <span>年份</span>
+    <span>标签</span>
+  </div>
+  <div class="search-result-summary" data-search-summary>请输入关键词开始搜索。</div>
+  <div class="movie-grid" data-search-results></div>
+  <div class="empty-state" data-search-empty hidden>
+    <h2>没有找到相关内容</h2>
+    <p>请尝试更换关键词，或进入分类总览浏览全部影片。</p>
+    <a class="btn btn--primary" href="categories.html">浏览分类总览</a>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <a class="site-logo site-logo--footer" href="index.html">
+        <span class="site-logo__mark">▶</span>
+        <span class="site-logo__text">精选电影大全</span>
+      </a>
+      <p>精选电影大全页面汇集多类型影片内容，结合热门片单、口碑影片与分类栏目进行展示。</p>
+    </div>
+    <div>
+      <h2>快速入口</h2>
+      <div class="footer-links">
+        <a href="index.html">首页</a>
+        <a href="categories.html">分类总览</a>
+        <a href="rankings.html">排行榜</a>
+        <a href="search.html">搜索筛选</a>
+      </div>
+    </div>
+    <div>
+      <h2>精选栏目</h2>
+      <div class="footer-links footer-links--columns">
+          <a href="category-jingxuan.html">精选片库</a>
+          <a href="category-remen.html">热门合集</a>
+          <a href="category-koubei.html">口碑影单</a>
+          <a href="category-xinpian.html">新片档案</a>
+          <a href="category-gaofen.html">高分推荐</a>
+          <a href="category-zhoumo.html">周末片单</a>
+          <a href="category-juji.html">剧集精选</a>
+          <a href="category-dianying.html">电影长廊</a>
+      </div>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <span>© 2026 精选电影大全</span>
+    <span>纯静态 HTML 影视站点</span>
+  </div>
+</footer>
+<script src="assets/data/search-index.js"></script>
+<script src="assets/js/site.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

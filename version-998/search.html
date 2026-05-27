@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>搜索影片 - 国产经典电影</title>
+  <meta name="description" content="国产经典电影搜索页，支持按片名、地区、类型、年份和分类筛选 2000 条影片。" />
+  <meta name="keywords" content="搜索影片,国产经典电影,影片筛选,静态搜索" />
+  <link rel="stylesheet" href="assets/site.css" />
+  <script src="assets/catalog.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body class="bg-slate-950 text-white antialiased">
+
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/85 backdrop-blur-xl">
+      <div class="mx-auto flex max-w-7xl items-center gap-4 px-4 py-4 sm:px-6 lg:px-8">
+        <a href="index.html" class="flex items-center gap-3 text-white">
+          <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-lg font-black text-white shadow-lg shadow-orange-500/30">影</div>
+          <div>
+            <div class="text-lg font-bold leading-none">国产经典电影</div>
+            <div class="mt-1 text-xs text-slate-400">经典影片合集 · 高清在线点播</div>
+          </div>
+        </a>
+        <button class="ml-auto inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white lg:hidden" data-menu-button aria-label="打开菜单">☰</button>
+        <nav class="hidden flex-1 items-center justify-center gap-6 text-sm font-medium text-slate-300 lg:flex">
+          <a class="hover:text-white " href="index.html">首页</a>
+          <a class="hover:text-white " href="categories.html">分类</a>
+          <a class="hover:text-white " href="rank.html">排行榜</a>
+          <a class="hover:text-white text-white" href="search.html">搜索</a>
+        </nav>
+        <form class="hidden items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-3 py-2 lg:flex" action="search.html" method="get">
+          <input name="q" class="w-44 bg-transparent text-sm text-white placeholder:text-slate-400 focus:outline-none" placeholder="搜片名 / 地区 / 类型" />
+          <button class="rounded-xl bg-amber-500 px-3 py-2 text-sm font-semibold text-white hover:bg-amber-400">搜索</button>
+        </form>
+      </div>
+      <div class="hidden border-t border-white/10 bg-slate-950 px-4 py-4 lg:hidden" data-mobile-menu>
+        <nav class="mx-auto flex max-w-7xl flex-col gap-3 text-sm text-slate-300">
+          <a href="index.html">首页</a>
+          <a href="categories.html">分类</a>
+          <a href="rank.html">排行榜</a>
+          <a href="search.html">搜索</a>
+        </nav>
+      </div>
+    </header>
+    
+<main class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8" data-search-page>
+  <section class="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 md:p-10">
+    <h1 class="text-3xl font-black md:text-5xl">搜索影片</h1>
+    <p class="mt-4 max-w-3xl text-sm leading-7 text-slate-300">输入片名、地区、年份或类型，静态页面也能直接筛出对应影片。页面结果由本地数据文件渲染，不依赖后端。</p>
+  </section>
+  <section class="mt-8 grid gap-4 rounded-[2rem] border border-white/10 bg-white/5 p-4 md:grid-cols-4">
+    <input data-search-input class="rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500 md:col-span-2" name="q" placeholder="搜索片名 / 地区 / 类型 / 标签" />
+    <select data-bucket-filter class="rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-white">
+      <option value="">全部分类</option>
+      <option value="action">热血动作</option><option value="suspense">烧脑悬疑</option><option value="comedy">轻松喜剧</option><option value="drama">剧情年代</option><option value="sci-fi">科幻奇幻</option><option value="crime">犯罪刑侦</option><option value="family">家庭成长</option><option value="china">国产精选</option><option value="asia">亚洲精选</option><option value="western">欧美精选</option><option value="series">剧集长线</option>
+    </select>
+    <select data-type-filter class="rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-white">
+      <option value="">全部类型</option>
+      <option value="电影">电影</option>
+      <option value="剧集">剧集</option>
+      <option value="电视剧">电视剧</option>
+    </select>
+    <input data-year-filter class="rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="年份，例如 2024" />
+    <div class="flex items-center rounded-2xl border border-white/10 bg-slate-900/60 px-4 py-3 text-sm text-slate-300 md:col-span-2">共 <span class="mx-1 font-semibold text-amber-300" data-search-count>0 条结果</span></div>
+    <div class="md:col-span-4 text-sm text-slate-400">支持关键词实时筛选，适合站内检索与长尾关键词落地。</div>
+  </section>
+  <section class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5" data-search-results></section>
+</main>
+
+    <footer class="mt-16 border-t border-white/10 bg-slate-950/95">
+      <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div>
+            <div class="text-lg font-bold text-white">国产经典电影</div>
+            <p class="mt-2 max-w-2xl text-sm leading-6 text-slate-400">站点基于上传素材生成，保留纯静态结构、清晰目录和可直接访问的详情页，便于检索、收录和离线浏览。</p>
+          </div>
+          <div class="flex flex-wrap gap-3 text-sm text-slate-300">
+            <a class="rounded-xl border border-white/10 bg-white/5 px-4 py-2 hover:bg-white/10" href="categories.html">分类总览</a>
+            <a class="rounded-xl border border-white/10 bg-white/5 px-4 py-2 hover:bg-white/10" href="rank.html">排行榜</a>
+            <a class="rounded-xl border border-white/10 bg-white/5 px-4 py-2 hover:bg-white/10" href="search.html">搜索影片</a>
+          </div>
+        </div>
+        <div class="mt-8 text-xs text-slate-500">© 2026 · 静态影片站点</div>
+      </div>
+    </footer>
+    
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</body>
+</html>

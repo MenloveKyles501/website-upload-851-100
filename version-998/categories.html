@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>分类总览 - 国产经典电影</title>
+  <meta name="description" content="浏览国产经典电影的分类总览页，按动作、悬疑、喜剧、家庭、科幻、剧集等主题快速进入独立分类页。" />
+  <meta name="keywords" content="分类总览,动作电影,悬疑电影,喜剧电影,科幻电影,剧集,国产经典电影" />
+  <link rel="stylesheet" href="assets/site.css" />
+  <script src="assets/app.js" defer></script>
+</head>
+<body class="bg-slate-950 text-white antialiased">
+
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/85 backdrop-blur-xl">
+      <div class="mx-auto flex max-w-7xl items-center gap-4 px-4 py-4 sm:px-6 lg:px-8">
+        <a href="index.html" class="flex items-center gap-3 text-white">
+          <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-lg font-black text-white shadow-lg shadow-orange-500/30">影</div>
+          <div>
+            <div class="text-lg font-bold leading-none">国产经典电影</div>
+            <div class="mt-1 text-xs text-slate-400">经典影片合集 · 高清在线点播</div>
+          </div>
+        </a>
+        <button class="ml-auto inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white lg:hidden" data-menu-button aria-label="打开菜单">☰</button>
+        <nav class="hidden flex-1 items-center justify-center gap-6 text-sm font-medium text-slate-300 lg:flex">
+          <a class="hover:text-white " href="index.html">首页</a>
+          <a class="hover:text-white text-white" href="categories.html">分类</a>
+          <a class="hover:text-white " href="rank.html">排行榜</a>
+          <a class="hover:text-white " href="search.html">搜索</a>
+        </nav>
+        <form class="hidden items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-3 py-2 lg:flex" action="search.html" method="get">
+          <input name="q" class="w-44 bg-transparent text-sm text-white placeholder:text-slate-400 focus:outline-none" placeholder="搜片名 / 地区 / 类型" />
+          <button class="rounded-xl bg-amber-500 px-3 py-2 text-sm font-semibold text-white hover:bg-amber-400">搜索</button>
+        </form>
+      </div>
+      <div class="hidden border-t border-white/10 bg-slate-950 px-4 py-4 lg:hidden" data-mobile-menu>
+        <nav class="mx-auto flex max-w-7xl flex-col gap-3 text-sm text-slate-300">
+          <a href="index.html">首页</a>
+          <a href="categories.html">分类</a>
+          <a href="rank.html">排行榜</a>
+          <a href="search.html">搜索</a>
+        </nav>
+      </div>
+    </header>
+    
+<main class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+  <section class="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 md:p-10">
+    <div class="max-w-3xl">
+      <h1 class="text-3xl font-black md:text-5xl">分类总览</h1>
+      <p class="mt-4 text-sm leading-7 text-slate-300">这里把 2000 条影片拆成多个独立主题分类页，便于连续浏览和站内串联。每个分类页都有自己的标题、简介、影片列表和内链。</p>
+    </div>
+  </section>
+  <section class="mt-8 grid gap-5 md:grid-cols-2">
+      <a href="category/action.html" class="group rounded-[2rem] border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/10">
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="text-sm uppercase tracking-[0.25em] text-amber-300">action</div>
+            <h2 class="mt-2 text-2xl font-bold text-white">热血动作</h2>
+          </div>
+          <div class="rounded-2xl bg-amber-500/15 px-4 py-2 text-2xl font-black text-amber-300">397</div>
+        </div>
+        <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-300">动作 / 武侠 / 冒险。点击进入独立分类页，继续浏览对应影片卡片与详情入口。</p>
+      </a>
+    
+      <a href="category/suspense.html" class="group rounded-[2rem] border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/10">
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="text-sm uppercase tracking-[0.25em] text-amber-300">suspense</div>
+            <h2 class="mt-2 text-2xl font-bold text-white">烧脑悬疑</h2>
+          </div>
+          <div class="rounded-2xl bg-amber-500/15 px-4 py-2 text-2xl font-black text-amber-300">350</div>
+        </div>
+        <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-300">悬疑 / 惊悚 / 犯罪。点击进入独立分类页，继续浏览对应影片卡片与详情入口。</p>
+      </a>
+    
+      <a href="category/comedy.html" class="group rounded-[2rem] border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/10">
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="text-sm uppercase tracking-[0.25em] text-amber-300">comedy</div>
+            <h2 class="mt-2 text-2xl font-bold text-white">轻松喜剧</h2>
+          </div>
+          <div class="rounded-2xl bg-amber-500/15 px-4 py-2 text-2xl font-black text-amber-300">190</div>
+        </div>
+        <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-300">喜剧 / 家庭 / 校园。点击进入独立分类页，继续浏览对应影片卡片与详情入口。</p>
+      </a>
+    
+      <a href="category/drama.html" class="group rounded-[2rem] border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/10">
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="text-sm uppercase tracking-[0.25em] text-amber-300">drama</div>
+            <h2 class="mt-2 text-2xl font-bold text-white">剧情年代</h2>
+          </div>
+          <div class="rounded-2xl bg-amber-500/15 px-4 py-2 text-2xl font-black text-amber-300">370</div>
+        </div>
+        <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-300">剧情 / 家庭 / 历史。点击进入独立分类页，继续浏览对应影片卡片与详情入口。</p>
+      </a>
+    
+      <a href="category/sci-fi.html" class="group rounded-[2rem] border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/10">
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="text-sm uppercase tracking-[0.25em] text-amber-300">sci-fi</div>
+            <h2 class="mt-2 text-2xl font-bold text-white">科幻奇幻</h2>
+          </div>
+          <div class="rounded-2xl bg-amber-500/15 px-4 py-2 text-2xl font-black text-amber-300">52</div>
+        </div>
+        <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-300">科幻 / 奇幻 / 动画。点击进入独立分类页，继续浏览对应影片卡片与详情入口。</p>
+      </a>
+    
+      <a href="category/crime.html" class="group rounded-[2rem] border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/10">
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="text-sm uppercase tracking-[0.25em] text-amber-300">crime</div>
+            <h2 class="mt-2 text-2xl font-bold text-white">犯罪刑侦</h2>
+          </div>
+          <div class="rounded-2xl bg-amber-500/15 px-4 py-2 text-2xl font-black text-amber-300">4</div>
+        </div>
+        <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-300">犯罪 / 复仇 / 卧底。点击进入独立分类页，继续浏览对应影片卡片与详情入口。</p>
+      </a>
+    
+      <a href="category/family.html" class="group rounded-[2rem] border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/10">
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="text-sm uppercase tracking-[0.25em] text-amber-300">family</div>
+            <h2 class="mt-2 text-2xl font-bold text-white">家庭成长</h2>
+          </div>
+          <div class="rounded-2xl bg-amber-500/15 px-4 py-2 text-2xl font-black text-amber-300">12</div>
+        </div>
+        <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-300">亲情 / 青春 / 成长。点击进入独立分类页，继续浏览对应影片卡片与详情入口。</p>
+      </a>
+    
+      <a href="category/china.html" class="group rounded-[2rem] border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/10">
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="text-sm uppercase tracking-[0.25em] text-amber-300">china</div>
+            <h2 class="mt-2 text-2xl font-bold text-white">国产精选</h2>
+          </div>
+          <div class="rounded-2xl bg-amber-500/15 px-4 py-2 text-2xl font-black text-amber-300">24</div>
+        </div>
+        <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-300">中国大陆 / 港澳台 / 国产经典。点击进入独立分类页，继续浏览对应影片卡片与详情入口。</p>
+      </a>
+    
+      <a href="category/asia.html" class="group rounded-[2rem] border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/10">
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="text-sm uppercase tracking-[0.25em] text-amber-300">asia</div>
+            <h2 class="mt-2 text-2xl font-bold text-white">亚洲精选</h2>
+          </div>
+          <div class="rounded-2xl bg-amber-500/15 px-4 py-2 text-2xl font-black text-amber-300">6</div>
+        </div>
+        <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-300">日本 / 韩国 / 动漫。点击进入独立分类页，继续浏览对应影片卡片与详情入口。</p>
+      </a>
+    
+      <a href="category/western.html" class="group rounded-[2rem] border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/10">
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="text-sm uppercase tracking-[0.25em] text-amber-300">western</div>
+            <h2 class="mt-2 text-2xl font-bold text-white">欧美精选</h2>
+          </div>
+          <div class="rounded-2xl bg-amber-500/15 px-4 py-2 text-2xl font-black text-amber-300">26</div>
+        </div>
+        <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-300">欧美 / 国际 / 海外。点击进入独立分类页，继续浏览对应影片卡片与详情入口。</p>
+      </a>
+    
+      <a href="category/series.html" class="group rounded-[2rem] border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/10">
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="text-sm uppercase tracking-[0.25em] text-amber-300">series</div>
+            <h2 class="mt-2 text-2xl font-bold text-white">剧集长线</h2>
+          </div>
+          <div class="rounded-2xl bg-amber-500/15 px-4 py-2 text-2xl font-black text-amber-300">569</div>
+        </div>
+        <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-300">电视剧 / 剧集 / 连载。点击进入独立分类页，继续浏览对应影片卡片与详情入口。</p>
+      </a>
+    </section>
+</main>
+
+    <footer class="mt-16 border-t border-white/10 bg-slate-950/95">
+      <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div>
+            <div class="text-lg font-bold text-white">国产经典电影</div>
+            <p class="mt-2 max-w-2xl text-sm leading-6 text-slate-400">站点基于上传素材生成，保留纯静态结构、清晰目录和可直接访问的详情页，便于检索、收录和离线浏览。</p>
+          </div>
+          <div class="flex flex-wrap gap-3 text-sm text-slate-300">
+            <a class="rounded-xl border border-white/10 bg-white/5 px-4 py-2 hover:bg-white/10" href="categories.html">分类总览</a>
+            <a class="rounded-xl border border-white/10 bg-white/5 px-4 py-2 hover:bg-white/10" href="rank.html">排行榜</a>
+            <a class="rounded-xl border border-white/10 bg-white/5 px-4 py-2 hover:bg-white/10" href="search.html">搜索影片</a>
+          </div>
+        </div>
+        <div class="mt-8 text-xs text-slate-500">© 2026 · 静态影片站点</div>
+      </div>
+    </footer>
+    
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</body>
+</html>
